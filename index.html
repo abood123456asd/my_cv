@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CV - Abedalrahman Osama Meri</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .photo-container {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-photo:hover::after {
+            content: "Click to enlarge the image";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .photo-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            color: rgba(255,255,255,0.8);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .logo-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .university-logo, .achievement-badge {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            padding: 8px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .university-logo:hover, .achievement-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .university-logo:hover::after, .achievement-badge:hover::after {
+            content: "Click to enlarge the image";
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 9px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        
+        .university-logo img, .achievement-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .logo-label {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 9px;
+            color: rgba(255,255,255,0.8);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .header-info {
+            text-align: left;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .name {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .title {
+            font-size: 1.4em;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .contact-table td {
+            padding: 8px 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.95em;
+        }
+        
+        .contact-table td:first-child {
+            font-weight: bold;
+            background: rgba(255,255,255,0.1);
+            width: 100px;
+        }
+        
+        .whatsapp-link {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .whatsapp-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: #e74c3c;
+        }
+        
+        .objective-box {
+            background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .objective-box::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 3em;
+            color: #3498db;
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 2px solid #3498db;
+        }
+        
+        .skills-table th {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .skills-table td {
+            padding: 12px 15px;
+            border: 1px solid #bdc3c7;
+            vertical-align: top;
+        }
+        
+        .skills-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .skills-table tr:hover {
+            background: #e3f2fd;
+            transition: background 0.3s ease;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #27ae60;
+            margin-top: 20px;
+        }
+        
+        .education-table th {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .education-table td {
+            padding: 15px;
+            border: 1px solid #bdc3c7;
+            vertical-align: top;
+        }
+        
+        .education-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .cert-placeholder {
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px dashed #bdc3c7;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-style: italic;
+            margin: 15px 0;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .cert-placeholder:hover {
+            transform: scale(1.02);
+            border-color: #3498db;
+        }
+        
+        .cert-placeholder:hover::after {
+            content: "Click to enlarge the image";
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        
+        .cert-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        
+        .competencies-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #e74c3c;
+            margin-top: 20px;
+        }
+        
+        .competencies-table th {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .competencies-table td {
+            padding: 12px 15px;
+            border: 1px solid #bdc3c7;
+            vertical-align: top;
+        }
+        
+        .competencies-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .competency-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .competency-bullet {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .languages-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #f39c12;
+            margin-top: 20px;
+        }
+        
+        .languages-table th {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .languages-table td {
+            padding: 15px;
+            border: 1px solid #bdc3c7;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .languages-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .proficiency-bar {
+            width: 100%;
+            height: 20px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .proficiency-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+        
+        .proficiency-native {
+            width: 100%;
+            background: linear-gradient(135deg, #27ae60, #229954);
+        }
+        
+        .proficiency-fluent {
+            width: 85%;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+        }
+        
+        /* Modal styles for image enlargement */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .modal-content.placeholder {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px dashed #bdc3c7;
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 1.5em;
+            padding: 40px;
+            text-align: center;
+            width: 400px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.3s;
+        }
+        
+        .close:hover {
+            color: #bbb;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-info {
+                text-align: center;
+                min-width: auto;
+            }
+            
+            .logo-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .skills-table, .education-table, .competencies-table, .languages-table {
+                font-size: 0.9em;
+            }
+            
+            .skills-table th, .skills-table td,
+            .education-table th, .education-table td,
+            .competencies-table th, .competencies-table td,
+            .languages-table th, .languages-table td {
+                padding: 10px 8px;
+            }
+            
+            .modal-content {
+                max-width: 95%;
+                max-height: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <div class="photo-container">
+                    <div class="profile-photo" onclick="openModal('profile')">
+                        <img src="https://imgur.com/gSHAkce.jpg" alt="Profile Photo">
+                    </div>
+                </div>
+                
+                <div class="header-info">
+                    <h1 class="name">Abedalrahman Osama Meri</h1>
+                    <h2 class="title">Artificial Intelligence Specialist</h2>
+                    
+                    <table class="contact-table">
+                        <tr>
+                            <td>📧 Email:</td>
+                            <td>abedabod65@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>📍 Location:</td>
+                            <td>Marka, Jordan</td>
+                        </tr>
+                        <tr>
+                            <td>📱 Phone:</td>
+                         <td><a href="https://wa.me/962782865920" class="whatsapp-link" target="_blank">0782865920-  Click here to open WhatsApp</a></td>
+                        </tr>
+                        <tr>
+                            <td>🎓 University:</td>
+                            <td>Hashemite University</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="logo-container">
+                    <div class="university-logo" onclick="openModal('university')">
+                        <img src="https://i.imgur.com/c3LxYmL.jpeg" alt="University Logo">
+                    </div>
+                    
+                    <div class="achievement-badge" onclick="openModal('achievement')">
+                        <img src="https://i.imgur.com/nBrrQHc.png" alt="AI Badge">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Professional Objective -->
+            <section class="section">
+                <h3 class="section-title">Professional Objective</h3>
+                <div class="objective-box">
+                    Passionate Artificial Intelligence specialist with comprehensive knowledge in machine learning, deep learning, and computer vision. Seeking training opportunities to apply my technical expertise in Python, Java, C++, and web technologies while contributing to innovative AI solutions. Strong background in data science and natural language processing with excellent English proficiency.
+                </div>
+            </section>
+            
+            <!-- Technical Skills -->
+            <section class="section">
+                <h3 class="section-title">Technical Skills</h3>
+                <table class="skills-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Technologies & Skills</th>
+                            <th>Proficiency Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Programming Languages</strong></td>
+                            <td>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">C++</span>
+                                </div>
+                            </td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI & Machine Learning</strong></td>
+                            <td>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Machine Learning</span>
+                                    <span class="skill-tag">Deep Learning</span>
+                                    <span class="skill-tag">Computer Vision</span>
+                                    <span class="skill-tag">NLP</span>
+                                </div>
+                            </td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Web Technologies</strong></td>
+                            <td>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">HTML</span>
+                                    <span class="skill-tag">CSS</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">Web Development</span>
+                                </div>
+                            </td>
+                            <td>Intermediate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data & Analytics</strong></td>
+                            <td>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Data Science</span>
+                                    <span class="skill-tag">Business Analytics</span>
+                                    <span class="skill-tag">Digital Image Processing</span>
+                                </div>
+                            </td>
+                            <td>Advanced</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Education -->
+            <section class="section">
+                <h3 class="section-title">Education</h3>
+                <table class="education-table">
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bachelor's Degree in Computer Science/AI</strong></td>
+                            <td>Hashemite University</td>
+                            <td><span style="background: #27ae60; color: white; padding: 4px 8px; border-radius: 4px;">In Progress</span></td>
+                            <td>Comprehensive curriculum covering artificial intelligence, machine learning, data structures, algorithms, and software engineering principles.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Certifications -->
+            <section class="section">
+                <h3 class="section-title">Certifications & Training</h3>
+                <table class="education-table">
+                    <thead>
+                        <tr>
+                            <th>Certification</th>
+                            <th>Description</th>
+                            <th>Certificate Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Digital Course Certificate</strong></td>
+                            <td>Completed comprehensive digital certification program covering advanced topics in artificial intelligence and machine learning.</td>
+                            <td>
+                                <div class="cert-placeholder" onclick="openModal('certificate')">
+                                    <img src="https://imgur.com/8B4seY0.png" alt="Certificate">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Languages -->
+            <section class="section">
+                <h3 class="section-title">Languages</h3>
+                <table class="languages-table">
+                    <thead>
+                        <tr>
+                            <th>Language</th>
+                            <th>Proficiency Level</th>
+                            <th>Skills</th>
+                            <th>Proficiency Bar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Arabic</strong></td>
+                            <td>Native Speaker</td>
+                            <td>Reading, Writing, Speaking, Listening</td>
+                            <td>
+                                <div class="proficiency-bar">
+                                    <div class="proficiency-fill proficiency-native"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>English</strong></td>
+                            <td>Proficient</td>
+                            <td>Technical Writing, Communication, Documentation</td>
+                            <td>
+                                <div class="proficiency-bar">
+                                    <div class="proficiency-fill proficiency-fluent"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Core Competencies -->
+            <section class="section">
+                <h3 class="section-title">Core Competencies</h3>
+                <table class="competencies-table">
+                    <thead>
+                        <tr>
+                            <th>Competency Area</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Machine Learning & AI</strong></td>
+                            <td>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Advanced understanding of machine learning algorithms and deep learning architectures</span>
+                                </div>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Natural Language Processing expertise with practical applications</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Computer Vision</strong></td>
+                            <td>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Proficient in computer vision techniques and digital image processing</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Science</strong></td>
+                            <td>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Strong foundation in data science and business analytics</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Development</strong></td>
+                            <td>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Full-stack development capabilities with modern web technologies</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>References available upon request | Portfolio and project samples can be provided during interview</p>
+            <p style="margin-top: 10px; font-weight: bold;">I am seeking a training opportunity at your company to fulfill my university requirements for the summer semester.</p>
+        </footer>
+    </div>
+    
+    <!-- Modal for image enlargement -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalContent" class="modal-content" src="" alt="Enlarged Image">
+    </div>
+
+    <script>
+        function openModal(imageType) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalContent');
+            
+            let imageSrc = '';
+            switch(imageType) {
+                case 'profile':
+                    imageSrc = 'https://imgur.com/gSHAkce.jpg';
+                    break;
+                case 'university':
+                    imageSrc = 'https://i.imgur.com/c3LxYmL.jpeg';
+                    break;
+                case 'achievement':
+                    imageSrc = 'https://i.imgur.com/nBrrQHc.png';
+                    break;
+                case 'certificate':
+                    imageSrc = 'https://imgur.com/8B4seY0.png';
+                    break;
+            }
+            
+            modalImg.src = imageSrc;
+            modal.style.display = 'block';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+        
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

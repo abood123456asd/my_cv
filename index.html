@@ -699,11 +699,11 @@
                     <table class="contact-table">
                         <tr>
                             <td>📧 Email:</td>
-                            <td><a href="/cdn-cgi/l/email-protection#0f6e6d6a6b6e6d606b393a4f68626e6663216c6062" class="email-link"><span class="__cf_email__" data-cfemail="dfbebdbabbbebdb0bbe9ea9fb8b2beb6b3f1bcb0b2">[email&#160;protected]</span></a></td>
+                            <td><a href="mailto:abedabod65@gmail.com" class="email-link">abedabod65@gmail.com-  Click here to open email</a></td>
                         </tr>
                         <tr>
                             <td>📍 Location:</td>
-                            <td>Marka, Jordan</td>
+                            <td>Amman, Jordan</td>
                         </tr>
                         <tr>
                             <td>📱 Phone:</td>
@@ -882,7 +882,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Digital AI & ML Certificate</strong></td>
+                            <td><strong>Digital Artificial Intelligence and Machine Learning Certificate from Shai Company</strong></td>
                             <td>
                                 Completed a comprehensive digital certification program covering advanced topics in artificial intelligence and machine learning. The program included in-depth modules on:
                                 <ul style="margin-top: 8px; margin-left: 20px;">
@@ -917,7 +917,7 @@
                             </td>
                             <td>
                                 <div class="cert-placeholder" onclick="openModal('certificate2')">
-                                    <img src="https://i.imgur.com/capm_certificate.png" alt="CAPM Certificate">
+                                    <img src="https://i.imgur.com/mhroNEB.jpeg" alt="CAPM Certificate">
                                 </div>
                             </td>
                         </tr>
@@ -938,18 +938,12 @@
                             </td>
                             <td>
                                 <div class="cert-placeholder" onclick="openModal('certificate3')">
-                                    <img src="https://i.imgur.com/icdl_certificate.png" alt="ICDL Certificate">
+                                    <img src="https://i.imgur.com/UvF00iM.jpeg" alt="ICDL Certificate">
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                
-                <div style="background: linear-gradient(135deg, #27ae60, #229954); color: white; padding: 20px; border-radius: 10px; margin-top: 25px; text-align: center; box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);">
-                    <p style="font-size: 1.1em; font-weight: 600; margin: 0;">
-                        ✓ All certifications listed above are valid and verified. Certification credentials and verification details are available upon request.
-                    </p>
-                </div>
             </section>
             
             <!-- Languages -->
@@ -1109,7 +1103,7 @@
         <img id="modalContent" class="modal-content" src="" alt="Enlarged Image">
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function openModal(imageType) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalContent');
@@ -1129,9 +1123,11 @@
                     imageSrc = 'https://imgur.com/8B4seY0.png';
                     break;
                 case 'certificate2':
+                    // Replace this with your CAPM certificate image URL
                     imageSrc = 'https://i.imgur.com/mhroNEB.jpeg';
                     break;
                 case 'certificate3':
+                    // Replace this with your ICDL certificate image URL
                     imageSrc = 'https://i.imgur.com/UvF00iM.jpeg';
                     break;
             }
@@ -1151,3 +1147,15 @@
             if (event.target === modal) {
                 modal.style.display = 'none';
             }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -210,13 +210,13 @@
             width: 100px;
         }
         
-        .whatsapp-link {
+        .whatsapp-link, .email-link {
             color: white;
             text-decoration: none;
             transition: opacity 0.3s;
         }
         
-        .whatsapp-link:hover {
+        .whatsapp-link:hover, .email-link:hover {
             opacity: 0.8;
             text-decoration: underline;
         }
@@ -272,6 +272,70 @@
             color: #3498db;
             opacity: 0.3;
             font-family: serif;
+        }
+        
+        .project-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            margin-top: 20px;
+        }
+        
+        .project-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .project-description {
+            font-size: 1.05em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .project-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .feature-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .feature-description {
+            font-size: 0.95em;
+            opacity: 0.9;
+            line-height: 1.5;
         }
         
         .skills-table {
@@ -391,6 +455,21 @@
             height: 100%;
             object-fit: cover;
             border-radius: 6px;
+        }
+        
+        .cert-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        
+        .cert-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
         }
         
         .competencies-table {
@@ -595,6 +674,10 @@
                 max-width: 95%;
                 max-height: 95%;
             }
+            
+            .project-features {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -616,15 +699,15 @@
                     <table class="contact-table">
                         <tr>
                             <td>📧 Email:</td>
-                            <td>abedabod65@gmail.com</td>
+                            <td><a href="mailto:abedabod65@gmail.com" class="email-link">abedabod65@gmail.com-  Click here to open WhatsApp</a></td>
                         </tr>
                         <tr>
                             <td>📍 Location:</td>
-                            <td>Marka, Jordan</td>
+                            <td>Amman, Jordan</td>
                         </tr>
                         <tr>
                             <td>📱 Phone:</td>
-                         <td><a href="https://wa.me/962782865920" class="whatsapp-link" target="_blank">0782865920-  Click here to open WhatsApp</a></td>
+                         <td><a href="https://wa.me/962782865920" class="whatsapp-link" target="_blank">0782865920 - Click here to open WhatsApp</a></td>
                         </tr>
                         <tr>
                             <td>🎓 University:</td>
@@ -651,7 +734,52 @@
             <section class="section">
                 <h3 class="section-title">Professional Objective</h3>
                 <div class="objective-box">
-                    Passionate Artificial Intelligence specialist with comprehensive knowledge in machine learning, deep learning, and computer vision. Seeking training opportunities to apply my technical expertise in Python, Java, C++, and web technologies while contributing to innovative AI solutions. Strong background in data science and natural language processing with excellent English proficiency.
+                    Passionate Artificial Intelligence specialist with comprehensive knowledge in machine learning, deep learning, and computer vision. Seeking employment opportunities to apply my technical expertise in Python, Java, C++, and web technologies while contributing to innovative AI solutions. Strong background in data science, data analysis, and natural language processing with excellent English proficiency.
+                </div>
+            </section>
+            
+            <!-- Graduation Project -->
+            <section class="section">
+                <h3 class="section-title">Graduation Project</h3>
+                <div class="project-box">
+                    <div class="project-title">🎓 Data Mining Application</div>
+                    <div class="project-description">
+                        Developed a comprehensive data mining web application as my graduation project, designed to streamline the entire data analysis workflow from data upload to machine learning model deployment. This full-stack application provides an intuitive interface for data scientists and analysts to perform end-to-end data mining operations without requiring extensive programming knowledge.
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <div class="feature-title">Data Upload</div>
+                            <div class="feature-description">
+                                Multi-format data import supporting TXT, CSV, and Excel files with automatic format detection and validation
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <div class="feature-title">Data Preprocessing</div>
+                            <div class="feature-description">
+                                Comprehensive data cleaning and transformation tools including missing value handling, normalization, and feature engineering
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <div class="feature-title">Data Visualization</div>
+                            <div class="feature-description">
+                                Interactive charts and graphs for exploratory data analysis with customizable visualization options
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-number">04</div>
+                            <div class="feature-title">Machine Learning</div>
+                            <div class="feature-description">
+                                Implementation of various ML algorithms including classification, regression, and clustering with performance metrics
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             
@@ -707,6 +835,7 @@
                             <td>
                                 <div class="skill-tags">
                                     <span class="skill-tag">Data Science</span>
+                                    <span class="skill-tag">Data Analysis</span>
                                     <span class="skill-tag">Business Analytics</span>
                                     <span class="skill-tag">Digital Image Processing</span>
                                 </div>
@@ -733,7 +862,7 @@
                         <tr>
                             <td><strong>Bachelor's Degree in Computer Science/AI</strong></td>
                             <td>Hashemite University</td>
-                            <td><span style="background: #27ae60; color: white; padding: 4px 8px; border-radius: 4px;">In Progress</span></td>
+                            <td><span style="background: #27ae60; color: white; padding: 4px 8px; border-radius: 4px;">Graduated with Good Grade</span></td>
                             <td>Comprehensive curriculum covering artificial intelligence, machine learning, data structures, algorithms, and software engineering principles.</td>
                         </tr>
                     </tbody>
@@ -742,7 +871,7 @@
             
             <!-- Certifications -->
             <section class="section">
-                <h3 class="section-title">Certifications & Training</h3>
+                <h3 class="section-title">Certifications & Professional Development</h3>
                 <table class="education-table">
                     <thead>
                         <tr>
@@ -753,11 +882,63 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Digital Course Certificate</strong></td>
-                            <td>Completed comprehensive digital certification program covering advanced topics in artificial intelligence and machine learning.</td>
+                            <td><strong>Digital Artificial Intelligence and Machine Learning Certificate from Shai Company</strong></td>
                             <td>
-                                <div class="cert-placeholder" onclick="openModal('certificate')">
-                                    <img src="https://imgur.com/8B4seY0.png" alt="Certificate">
+                                Completed a comprehensive digital certification program covering advanced topics in artificial intelligence and machine learning. The program included in-depth modules on:
+                                <ul style="margin-top: 8px; margin-left: 20px;">
+                                    <li>Data Science fundamentals and methodologies</li>
+                                    <li>Advanced Python programming for AI applications</li>
+                                    <li>Statistical analysis and probability theory</li>
+                                    <li>SQL and database management</li>
+                                    <li>Machine Learning algorithms and implementations</li>
+                                    <li>Deep Learning architectures and neural networks</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <div class="cert-placeholder" onclick="openModal('certificate1')">
+                                    <img src="https://imgur.com/8B4seY0.png" alt="Digital Certificate">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAPM - Certified Associate in Project Management</strong></td>
+                            <td>
+                                Obtained the CAPM certification from the Project Management Institute (PMI), demonstrating expertise in project management fundamentals. This globally recognized certification covers:
+                                <ul style="margin-top: 8px; margin-left: 20px;">
+                                    <li>Project management framework and terminology</li>
+                                    <li>Project integration and scope management</li>
+                                    <li>Time, cost, and quality management</li>
+                                    <li>Resource and communication management</li>
+                                    <li>Risk management and stakeholder engagement</li>
+                                    <li>Professional and ethical project practices</li>
+                                </ul>
+                                <br>
+                                <a href="https://www.pmi.org/certifications/certified-associate-capm" class="cert-link" target="_blank">View CAPM Details on PMI Website</a>
+                            </td>
+                            <td>
+                                <div class="cert-placeholder" onclick="openModal('certificate2')">
+                                    <img src="https://imgur.com/a/ruduk2T" alt="CAPM Certificate">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>ICDL - International Computer Driving License</strong></td>
+                            <td>
+                                Achieved ICDL certification from Specto, validating comprehensive computer literacy and digital skills. This internationally recognized certification demonstrates proficiency in:
+                                <ul style="margin-top: 8px; margin-left: 20px;">
+                                    <li>Computer and online essentials</li>
+                                    <li>Word processing and document creation</li>
+                                    <li>Spreadsheets and data analysis</li>
+                                    <li>Presentation software and design</li>
+                                    <li>Database management fundamentals</li>
+                                    <li>IT security and online safety</li>
+                                </ul>
+                                <br>
+                                <a href="https://icdl.org/" class="cert-link" target="_blank">View ICDL Certification Details</a>
+                            </td>
+                            <td>
+                                <div class="cert-placeholder" onclick="openModal('certificate3')">
+                                    <img src="https://imgur.com/a/zxAtDEr" alt="ICDL Certificate">
                                 </div>
                             </td>
                         </tr>
@@ -836,11 +1017,62 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><strong>Data Science</strong></td>
+                            <td><strong>Deep Learning</strong></td>
                             <td>
                                 <div class="competency-item">
                                     <span class="competency-bullet">▶</span>
-                                    <span>Strong foundation in data science and business analytics</span>
+                                    <span>Expertise in neural network architectures including CNNs, RNNs, and transformers for various AI applications</span>
+                                </div>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Skilled in model training, optimization, and deployment using modern deep learning frameworks</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Information Retrieval</strong></td>
+                            <td>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Proficient in retrieving relevant documents and information for specific queries and sentences</span>
+                                </div>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Skilled in document ranking, search optimization, and text matching algorithms</span>
+                                </div>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Experience with indexing, keyword extraction, and semantic search techniques</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Robotics Programming</strong></td>
+                            <td>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Knowledge in robotics programming and autonomous systems development</span>
+                                </div>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Experience with sensor integration, motion planning, and control algorithms</span>
+                                </div>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Understanding of robotics frameworks and real-time systems programming</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Science & Analysis</strong></td>
+                            <td>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Strong foundation in data science and data analytics</span>
+                                </div>
+                                <div class="competency-item">
+                                    <span class="competency-bullet">▶</span>
+                                    <span>Experienced in data analysis, statistical modeling, and data visualization and preprocessing techniques</span>
                                 </div>
                             </td>
                         </tr>
@@ -861,7 +1093,7 @@
         <!-- Footer -->
         <footer class="footer">
             <p>References available upon request | Portfolio and project samples can be provided during interview</p>
-            <p style="margin-top: 10px; font-weight: bold;">I am seeking a training opportunity at your company to fulfill my university requirements for the summer semester.</p>
+            <p style="margin-top: 10px; font-weight: bold;">I am seeking an employment opportunity at your company</p>
         </footer>
     </div>
     
@@ -887,8 +1119,16 @@
                 case 'achievement':
                     imageSrc = 'https://i.imgur.com/nBrrQHc.png';
                     break;
-                case 'certificate':
+                case 'certificate1':
                     imageSrc = 'https://imgur.com/8B4seY0.png';
+                    break;
+                case 'certificate2':
+                    // Replace this with your CAPM certificate image URL
+                    imageSrc = 'https://i.imgur.com/capm_certificate.png';
+                    break;
+                case 'certificate3':
+                    // Replace this with your ICDL certificate image URL
+                    imageSrc = 'https://i.imgur.com/icdl_certificate.png';
                     break;
             }
             
@@ -917,4 +1157,5 @@
         });
     </script>
 </body>
+
 </html>
